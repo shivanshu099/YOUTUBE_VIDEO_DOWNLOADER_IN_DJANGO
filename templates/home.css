@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: antiquewhite;
+}
+
+.main{
+    display: grid;
+    margin: 9vw auto;
+    justify-self: center;
+    align-items: center;
+}
+.main input{
+    margin: 9vw auto;
+    height: 9vw;
+    width: 50%;
+    font-size: 7vw;
+    gap: 5;
+    font-family: "kajiro";
+}
+
+.main button{
+    margin: -9vw auto;
+    height: 5vw;
+    width: 10vw;
+    font-size: 3vw;
+    gap: 2;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-family: "kajiro";
+    border-radius: 20px;
+    border: 2px solid red;
+}
+
+.main img{
+    height: 200px;
+    width: 300px;
+    border-radius: 70px;
+    border: 2px solid aliceblue;
+    margin: 0 auto;
+}
+
+.head{
+    font-size: 9vw;
+    font-family: "kajiro";
+    margin: 1vw auto;
+    font-weight: 100;
+    gap: 2;
+    text-align: center;
+    animation: dropin 8s ease forwards infinite;
+}
+
+video{
+    margin: 5vw auto;
+    display: grid;
+    height: 200px;
+    width: 400px;
+    border: 2px solid whitesmoke;
+}
+
+@keyframes dropin{
+    20%{
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    30%,100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

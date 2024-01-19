@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            color: antiquewhite;
+        }
+        
+        .main{
+            display: grid;
+            margin: 9vw auto;
+            justify-self: center;
+            align-items: center;
+        }
+        .main input{
+            margin: 2vw auto;
+            height: 9vw;
+            width: 50%;
+            font-size: 7vw;
+            gap: 5;
+            font-family: "kajiro";
+        }
+        
+        .button{
+            margin: 0 auto;
+            height: 9vw;
+            width: 50%;
+            font-size: 7vw;
+            gap: 5;
+            font-family: "kajiro";
+        }
+        
+        .main img{
+            height: 200px;
+            width: 300px;
+            border-radius: 70px;
+            border: 2px solid aliceblue;
+            margin: 0 auto;
+        }
+        
+        .head{
+            font-size: 9vw;
+            font-family: "kajiro";
+            margin: 1vw auto;
+            font-weight: 100;
+            gap: 2;
+            text-align: center;
+        }
+        
+        video{
+            margin: 5vw auto;
+            display: grid;
+            height: 300px;
+            width: 500px;
+            border: 2px solid whitesmoke;
+        }
+        @media only screen and (max-width: 600px) {
+            /* CSS rules for screens that are 600px or smaller */
+            video {
+              width: 90%;
+              height: 200px;
+            }
+            .main img {
+              display: none;
+            }
+          }
+  
+          @media only screen and (min-width: 600px) and (max-width: 768px) {
+            /* CSS rules for screens that are between 600px and 768px */
+            .main input {
+              width: 60%;
+              font-size: 6vw;
+            }
+            video {
+              width: 80%;
+              height: 250px;
+            }
+          }
+  
+          @media only screen and (orientation: portrait) {
+            /* CSS rules for screens that are in portrait mode */
+            .head {
+              color: pink;
+            }
+          }
+  
+          @media only screen and (orientation: landscape) {
+            /* CSS rules for screens that are in landscape mode */
+            .head {
+              color: cyan;
+            }
+          }
+    </style>
+</head>
+<body>
+    <h1 class="head">YT DOWNLOADER</h1>
+    <form class="main" method="post" >
+        {% csrf_token %} 
+        <input name="link" type="text" placeholder="ENTER THE LINK">
+        <input class="button" type="submit" value="Submit"> 
+    </form>
+    {% if a %}
+    <video src="{{ a }}" controls></video>
+    {% endif %}
+</body>
+</html>
+
+
+
